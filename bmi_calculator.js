@@ -48,13 +48,38 @@ function calculateBMIWithDelay() {
         classification="underweight";
       } else if (bmi >= 18.5 && bmi <=24.9) {
         classification = "Healthy weight";
+      } else if (bmi >= 25 && bmi <= 29.9) {
+        classification = "Overweight";
+      } else {
+        classification = "Obese";
       }
-      let message = `Your BMI is: ${bmi.toFixed(2)}`;
-      document.querySelector('.message-topic').textContent = message;
-      console.log(message);
-    }, 10000); // Delay of 10 seconds (10000 milliseconds)
+      
+      // Update the result messages with the calculated BMI and classification
+      let resultMessage = document.querySelector('.result-message');
+      resultMessage.textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+      resultMessage.style.display = 'block'; // Show the message
 
+      let resultClassification = document.querySelector('.result-classification');
+      resultClassification.textContent = `Your BMI suggests you are ${classification}`;
+      resultClassification.style.display = 'block'; // Show the message
 
+      let messageTopic = document.querySelector('.message-topic');
+      let messageBody = document.querySelector('.message-body');
+
+      messageTopic.style.display = 'none'; // Hide the message topic
+      messageBody.style.display = 'none'; // Hide the message body
+
+      setTimeout(function() {
+        messageTopic.style.display = 'block'; // Show the message topic after a minute
+        messageBody.style.display = 'block'; // Show the message body after a minute
+        
+        // Hide the result messages
+        resultMessage.style.display = 'none';
+        resultClassification.style.display = 'none';
+      }, 30000); // Delay of 1 minute 
+
+      console.log(resultMessage.textContent);
+    }, 5000); // Delay of 5 seconds 
   }
 }
 

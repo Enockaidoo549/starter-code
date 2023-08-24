@@ -36,16 +36,17 @@
   <p class="input-title">Enter your details below</p>
 
   <label class="custom-radio">
-    <input class="radio-button" type="checkbox" name="unit" />
+    <input id="metric" class="radio-button" type="radio" name="unit" />
     <span class="checkmark"></span>
-    <p class="metric">Metric</p>
+    <label class="metric" for="metric">Metric</label>
   </label>
 
   <label class="custom-radio">
-    <input class="radio-button" type="checkbox" name="unit" />
+    <input id="imperial" class="radio-button" type="radio" name="unit" />
     <span class="checkmark"></span>
-    <p class="imperial">Imperial</p>
-</label>
+    <label class="imperial" for="imperial">Imperial</label>
+  </label>
+
   <p 
   class="height" 
   >Height
