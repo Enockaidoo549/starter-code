@@ -34,5 +34,23 @@ function calculateBMI() {
   console.log("Weight:", weight);
   console.log("BMI:", bmi);
 }
+function calculateBMIWithDelay() {
+  let height = parseFloat(document.querySelector('.height-input').value);
+  let weight = parseFloat(document.querySelector('.weight-input').value);
+
+  // Check if both height and weight have been entered
+  if (!isNaN(height) && !isNaN(weight)) {
+    // Clear any previous timeout to prevent overlapping
+    clearTimeout(window.bmiTimeout);
+
+    // Set a new timeout of 10 seconds to calculate and display the result
+    window.bmiTimeout = setTimeout(function() {
+      let bmi = weight / ((height / 100) * (height / 100));
+      let message = `Your BMI is: ${bmi.toFixed(2)}`;
+      console.log(message);
+    }, 10000); // Delay of 10 seconds (10000 milliseconds)
+  }
+}
+
 
 bmi_calculator();
