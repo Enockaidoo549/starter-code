@@ -272,5 +272,16 @@ span.metric-height{
     display: inline;
     margin-right: 70px;
   }
-
+.result-message{
+  color: white;
+  width: 86px;
+  padding-top: 30px;
+}
+.result-classification{
+  color:#fff ;
+  display: inline;
+  width: 150px;
+  margin-right: 0;
+  font-size: 13px;
+}
   

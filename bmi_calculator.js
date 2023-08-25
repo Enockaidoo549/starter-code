@@ -40,12 +40,12 @@ function calculateBMIWithDelay() {
     // Clear any previous timeout to prevent overlapping
     clearTimeout(window.bmiTimeout);
 
-    // Set a new timeout of 10 seconds to calculate and display the result
+    // Set a new timeout of 2 seconds to calculate and display the result
     window.bmiTimeout = setTimeout(function() {
       let bmi = weight / ((height / 100) * (height / 100));
-      let classification = " ";
+      let classification = "";
       if (bmi < 18.5){
-        classification="underweight";
+        classification = "underweight";
       } else if (bmi >= 18.5 && bmi <=24.9) {
         classification = "Healthy weight";
       } else if (bmi >= 25 && bmi <= 29.9) {
@@ -54,7 +54,6 @@ function calculateBMIWithDelay() {
         classification = "Obese";
       }
       
-      // Update the result messages with the calculated BMI and classification
       let resultMessage = document.querySelector('.result-message');
       resultMessage.textContent = `Your BMI is: ${bmi.toFixed(1)}`;
       resultMessage.style.display = 'block'; // Show the message
@@ -69,18 +68,18 @@ function calculateBMIWithDelay() {
       messageTopic.style.display = 'none'; // Hide the message topic
       messageBody.style.display = 'none'; // Hide the message body
 
+      // Set a timeout to show the initial messages and hide the result messages
       setTimeout(function() {
-        messageTopic.style.display = 'block'; // Show the message topic after a minute
-        messageBody.style.display = 'block'; // Show the message body after a minute
+        messageTopic.style.display = 'block'; // Show the message topic
+        messageBody.style.display = 'block'; // Show the message body
         
-        // Hide the result messages
-        resultMessage.style.display = 'none';
-        resultClassification.style.display = 'none';
-      }, 30000); // Delay of 1 minute 
+        resultMessage.style.display = 'none'; // Hide the result message
+        resultClassification.style.display = 'none'; // Hide the classification message
+      }, 10000); // Delay of 10 seconds
 
       console.log(resultMessage.textContent);
-    }, 5000); // Delay of 5 seconds 
+    }, 2000); // Delay of 2 seconds 
   }
 }
- 
+
 bmi_calculator();
