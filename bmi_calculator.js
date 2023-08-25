@@ -56,7 +56,7 @@ function calculateBMIWithDelay() {
       
       // Update the result messages with the calculated BMI and classification
       let resultMessage = document.querySelector('.result-message');
-      resultMessage.textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+      resultMessage.textContent = `Your BMI is: ${bmi.toFixed(1)}`;
       resultMessage.style.display = 'block'; // Show the message
 
       let resultClassification = document.querySelector('.result-classification');
@@ -82,5 +82,5 @@ function calculateBMIWithDelay() {
     }, 5000); // Delay of 5 seconds 
   }
 }
-
+ 
 bmi_calculator();
