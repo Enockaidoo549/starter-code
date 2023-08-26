@@ -133,6 +133,16 @@ span.metric-height{
   padding-left: 10px;
   padding-right: 10px;
 }
+.height-input:hover,
+.weight-input:hover{
+  border-color: #d8e2e7;
+  border-width: 1px;
+}
+.height-input:active,
+.weight-input:active{
+  border-color: blue;
+  border-width: 1px;
+}
 
 .weight-input{
   position: relative;
@@ -276,10 +286,10 @@ span.metric-height{
   color: white;
   width: 86px;
   padding-top: 30px;
+  display: none;
 }
 .result-classification{
   color:#fff ;
-  display: inline;
   width: 150px;
   margin-right: 0;
   font-size: 13px;
