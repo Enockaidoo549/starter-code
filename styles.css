@@ -46,6 +46,18 @@ padding-left: 15%;
   background-color: white;
   border-radius: 16px;
 }
+.input-box-imperial{
+  position: absolute;
+  right: 200px;
+  top: 142px;
+  box-shadow: 0 10px 20px rgba(46, 15, 224, 0.2);
+  padding-right: 15px;
+  width: 450px;
+  padding-left: 15px;
+  height: 350px;
+  background-color: white;
+  border-radius: 16px;
+}
 .input-title{
   margin-left: 10px;
   font-weight: 700;

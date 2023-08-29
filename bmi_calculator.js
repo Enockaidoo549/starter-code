@@ -3,6 +3,7 @@ function bmi_calculator() {
   let weightInput = document.querySelector('.weight-input');
   let metricRadio = document.getElementById('metric');
   let imperialRadio = document.getElementById('imperial');
+  
 
   metricRadio.checked = true;
 
@@ -23,8 +24,10 @@ function bmi_calculator() {
     metricRadio.checked = false;
     heightInput.placeholder = '0';
     weightInput.placeholder = '0';
-    document.querySelector('.metric-height').textContent = 'in';
-    document.querySelector('.metric-weight').textContent = 'lbs';
+    let inputBoxImperial = document.querySelector('.input-box-imperial');
+    if (imperialRadio.checked === true){
+      inputBoxImperial.style.display = "block";
+  }
   });
 
   heightInput.addEventListener('input', calculateBMIWithDelay);
