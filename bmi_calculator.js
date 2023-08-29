@@ -25,10 +25,19 @@ function bmi_calculator() {
     heightInput.placeholder = '0';
     weightInput.placeholder = '0';
     let inputBoxImperial = document.querySelector('.input-box-imperial');
+    let inputBox = document.querySelector('.input-box');
+
     if (imperialRadio.checked === true){
       inputBoxImperial.style.display = "block";
-  }
-  });
+      imperialRadio.checked = true;
+      metricRadio.checked = false;
+      inputBox.style.display = "none";
+    }
+      else {
+        inputBoxImperial.style.display = "none";
+        inputBox.style.display = "block";
+      }}
+  );
 
   heightInput.addEventListener('input', calculateBMIWithDelay);
   weightInput.addEventListener('input', calculateBMIWithDelay);

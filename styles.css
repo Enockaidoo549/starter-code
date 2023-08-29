@@ -52,7 +52,7 @@ padding-left: 15%;
   top: 142px;
   box-shadow: 0 10px 20px rgba(46, 15, 224, 0.2);
   padding-right: 15px;
-  width: 450px;
+  width: 350px;
   padding-left: 15px;
   height: 350px;
   background-color: white;
@@ -112,6 +112,54 @@ padding-left: 15%;
 .metric{
   display: inline;
   margin-right: 100px;
+}
+.metric-imperial{
+  margin-right: 100px;
+  margin-bottom: 0px;
+}
+.height-imperial{
+  font-size: 12px;
+}
+.weight-imperial{
+  font-size: 12px;
+}
+.imperial-height-feet,
+.imperial-weight-stone,
+.imperial-weight-pounds,
+.imperial-height-inch{
+  color: blue;
+  font-size: 13px;
+}
+.imperial-height-feet{
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+.imperial-height-inch{
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+.imperial-weight-stone{
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+.imperial-weight-pounds{
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+.height-input-imperial,
+.weight-input-imperial{
+width: 120px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #D8E2E7;
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .imperial{
   display: inline;
