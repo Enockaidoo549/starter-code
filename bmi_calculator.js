@@ -34,6 +34,14 @@ function bmi_calculator() {
       inputBox.style.display = "none";
     }
       else {
+        metricRadio.addEventListener('click', function() {
+          metricRadio.checked = true;
+          imperialRadio.checked = false;
+          heightInput.placeholder = '0';
+          weightInput.placeholder = '0';
+          document.querySelector('.metric-height').textContent = 'cm';
+          document.querySelector('.metric-weight').textContent = 'kg';
+        });
         inputBoxImperial.style.display = "none";
         inputBox.style.display = "block";
       }}
