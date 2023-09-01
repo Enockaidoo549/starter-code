@@ -27,13 +27,17 @@ function bmi_calculator() {
     let inputBox = document.querySelector('.input-box');
     let imperialDisplay = document.querySelector('.js-result-display');
 
-    if (imperialRadio.checked === true){
+    if (imperialRadio.checked){
       calculateBmiImperial();
       inputBoxImperial.style.display = "block";
       imperialRadio.checked = true;
       metricRadio.checked = false;
       inputBox.style.display = "none";
       imperialDisplay.style.display = 'flex';
+      let resultDisplayImperial = document.querySelector('.js-result-display');
+      resultDisplayImperial.style.display = 'block';
+      let initMessageBoard = document.querySelector('.message-board');
+      initMessageBoard.style.display = 'none';
     }
       else {
         metricRadio.addEventListener('click', function() {
