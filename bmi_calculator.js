@@ -3,7 +3,6 @@ function bmi_calculator() {
   let weightInput = document.querySelector('.weight-input');
   let metricRadio = document.getElementById('metric');
   let imperialRadio = document.getElementById('imperial');
-  
 
   metricRadio.checked = true;
 
@@ -29,6 +28,7 @@ function bmi_calculator() {
     let imperialDisplay = document.querySelector('.js-result-display');
 
     if (imperialRadio.checked === true){
+      calculateBmiImperial();
       inputBoxImperial.style.display = "block";
       imperialRadio.checked = true;
       metricRadio.checked = false;
@@ -105,3 +105,23 @@ function calculateBMIWithDelay() {
 }
 
 bmi_calculator();
+
+function calculateBmiImperial(){
+  let heightFeet = parseFloat(document.querySelector('.js-height-feet').value);
+  let heightInch = parseFloat(document.querySelector('.js-height-inch').value);
+  let weightStone = parseFloat(document.querySelector('.js-weight-stone').value);
+  let weightPounds = parseFloat(document.querySelector('.js-weight-pounds').value);
+
+  // Calculate height in inches (1 foot = 12 inches)
+  let heightInInches = (heightFeet * 12) + heightInch;
+
+  // Convert weight from stones and pounds to pounds (1 stone = 14 pounds)
+  let weightInPounds = (weightStone * 14) + weightPounds;
+
+  // Calculate BMI (BMI formula for imperial units)
+  let bmi_imperial = (weightInPounds / (heightInInches * heightInInches)) * 703;
+  console.log(bmi_imperial);
+  console.log(heightFeet, heightInch, weightStone, weightPounds);
+
+}
+

@@ -150,8 +150,10 @@ padding-left: 15%;
   top: 0;
   right: 25px;
 }
-.height-input-imperial,
-.weight-input-imperial{
+.js-height-inch,
+.js-weight-stone,
+.js-weight-pounds,
+.js-height-feet{
 width: 120px;
   margin-right: 10px;
   border-radius: 8px;
