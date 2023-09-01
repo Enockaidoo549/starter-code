@@ -225,6 +225,16 @@ span.metric-height{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+.message-board-imperial{
+  background-color: #345ff6;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 80px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 .message-topic{
   font-size: 25px;
   margin-top: 20px;
