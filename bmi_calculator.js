@@ -26,12 +26,14 @@ function bmi_calculator() {
     weightInput.placeholder = '0';
     let inputBoxImperial = document.querySelector('.input-box-imperial');
     let inputBox = document.querySelector('.input-box');
+    let imperialDisplay = document.querySelector('.js-result-display');
 
     if (imperialRadio.checked === true){
       inputBoxImperial.style.display = "block";
       imperialRadio.checked = true;
       metricRadio.checked = false;
       inputBox.style.display = "none";
+      imperialDisplay.style.display = 'flex';
     }
       else {
         metricRadio.addEventListener('click', function() {
