@@ -1,3 +1,4 @@
+
 function bmi_calculator() {
   let heightInput = document.querySelector('.height-input');
   let weightInput = document.querySelector('.weight-input');
@@ -37,7 +38,11 @@ function bmi_calculator() {
       let resultDisplayImperial = document.querySelector('.js-result-display');
       resultDisplayImperial.style.display = 'block';
       let initMessageBoard = document.querySelector('.message-board');
-      initMessageBoard.style.display = 'none';
+      initMessageBoard.style.display = 'none'
+      let resultMessageImperial = document.querySelector('.result-message');
+      let resultClassificationImperial = document.querySelector('.result-classification');
+      resultDisplayImperial.textContent = `Your BMI is : ${bmi_imperial.toFixed(1)}`;
+      resultClassificationImperial =`Your BMI suggets ou are a ${classification}`;
     }
       else {
         metricRadio.addEventListener('click', function() {
@@ -112,6 +117,7 @@ bmi_calculator();
 
 function calculateBmiImperial(){
   let heightFeet = parseFloat(document.querySelector('.js-height-feet').value);
+  console.log(heightFeet);
   let heightInch = parseFloat(document.querySelector('.js-height-inch').value);
   let weightStone = parseFloat(document.querySelector('.js-weight-stone').value);
   let weightPounds = parseFloat(document.querySelector('.js-weight-pounds').value);
